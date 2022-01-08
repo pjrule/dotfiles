@@ -51,8 +51,11 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'yuezk/vim-js'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-abolish'
 Plugin 'sillybun/vim-repl'
 Plugin 'hashivim/vim-terraform'
+Plugin 'lervag/vimtex'
+
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -112,10 +115,15 @@ let g:livepreview_previewer = 'open -a Preview'
 set rtp+=/usr/local/opt/fzf
 
 "LinuxCodingStyle config
+"let g:linuxsty_patterns = [ "/Users/pjrule/COMP15" ]
 
 " Goyo auto-resize
 " https://github.com/junegunn/goyo.vim/issues/159#issuecomment-342417487
 autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
+
+let g:reply_repls = {
+\   'scheme': ['/Users/pjrule/Google Drive/Tufts/COMP105/build-prove-compare/bin/uscheme']
+\ }
 
 " COMP105 µSmalltalk
 au BufRead,BufNewFile *.smt set filetype=lisp
